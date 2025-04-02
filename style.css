@@ -1,107 +1,80 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: sans-serif;
-  background: linear-gradient(to right, #bdbdbd, #e0e0e0);
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #0b000b 50%, #8d2c8d 100%);
+  color: #fff;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
   min-height: 100vh;
+  text-align: left;
+  padding: 2rem;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 8px 8px 0 0;
-  background-color: #f3f3f3;
-  box-shadow: 10px 10px 0px #333;
-  padding: 0;
+.container {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #ccc;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  border: 1.5px solid #000;
-  overflow: hidden;
-  width: fit-content;
 }
 
-.browser-bar {
-  display: flex;
-  gap: 8px;
-  padding: 0.5rem;
-  background-color: #f3f3f3;
-  border-bottom: 2px solid #000;
-  width: 100%;
-}
-
-.dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  display: inline-block;
-  border: 1.5px solid #000;
-}
-
-.red {
-  background-color: #ff5f56;
-}
-
-.yellow {
-  background-color: #ffbd2e;
-}
-
-.green {
-  background-color: #27c93f;
-}
-
-.title-box {
-  padding: 1.5rem 2rem;
-  text-align: center;
-  width: 100%;
-}
-
-h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.button-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 800px;
-  width: 100%;
-}
-
-button {
-  background-color: #f3f3f3;
-  border: 2px solid #000;
-  padding: 1rem;
+.services {
+  list-style-type: none;
+  padding-left: 0;
+  color: #ff9ee8;
   font-size: 1.2rem;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.services li::before {
+  content: "• ";
+  color: #ff9ee8;
+  font-size: 1.2rem;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  border: 1px solid #ff9ee8;
+  color: #ff9ee8;
+  text-decoration: none;
   font-weight: bold;
-  box-shadow: 6px 6px 0px #333;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 4px 4px 0px #222;
+.contact-button:hover {
+  background: #ff9ee8;
+  color: #000;
 }
 
-@media (max-width: 768px) {
-  .button-container {
-    grid-template-columns: 1fr;
-    max-width: 400px;
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.8rem;
   }
 
-  h1 {
-    font-size: 2rem;
+  .services {
+    font-size: 1rem;
+  }
+
+  .contact-button {
+    width: 100%;
+    text-align: center;
   }
 }
 
